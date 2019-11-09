@@ -3,7 +3,10 @@ Data Source: Bureau of Transportation Statistics (BTS)
 
 <h3>What it achieves</h3>
 
-The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arrivals.aspx and downloads 2019 data for all flights arriving at New York's JFK airport. 
+The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arrivals.aspx and downloads 2018 and 2019 data for all flights arriving at New York's JFK airport. To analyze and parse the data extracted we use Pandas. 
+
+Focusing on the difference between 'Scheduled Arrival Time' and 'Actual Arrival Time' of passengers at the JFK gate, we look at the number of flights that arrived early.
+
 
 <h3>Methodology</h3>
 
