@@ -5,8 +5,6 @@ Data Source: Bureau of Transportation Statistics (BTS)
 
 The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arrivals.aspx and downloads 2018 and 2019 data for all flights arriving at New York's JFK airport. To analyze and parse the data extracted we use Pandas. 
 
-Focusing on the difference between 'Scheduled Arrival Time' and 'Actual Arrival Time' of passengers at the JFK gate, we look at the number of flights that arrived early.
-
 
 <h3>Methodology</h3>
 
@@ -18,5 +16,15 @@ Focusing on the difference between 'Scheduled Arrival Time' and 'Actual Arrival 
 6) Run a loop that updates the xpath until it reaches the last index number or airline option.
 
 Note: Use of selenium is due to the static nature of the url which limits our ability to scrape the website using only Python. Alternatively, Java can be used instead of Python.
+
+<h3> Pandas</h3>
+
+To obtain the difference between 'Scheduled Arrival Time' and 'Actual Arrival Time' of passengers at the JFK gate, we analyze thousands of rows of data using Pandas.
+
+<h3>Methodology</h3>
+
+The code looks at difference in flight arrival times by creating new columns using pd.to_datetime. 
+
+For the edge case where the airlines report an actual arrival time of '24:00,' the time has been converted to 00:00 and a new column called the 'actual arrival date' has been created which is +1 day to factor in for the change in the date.
 
 <h3>Caveat: Data is restricted to U.S. carrier scheduled service only.</h3>
