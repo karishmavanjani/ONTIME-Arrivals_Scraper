@@ -1,6 +1,6 @@
-year,Total flights,Early Arrivals,Inflated padding(>20mins early)
-2015,3768,1937,375
-2016,0,0,0
-2017,0,0,0
-2018,5133,2801,910
-2019,3273,1978,703
+Carrier Code,year,Total flights,Early Arrivals,Inflated padding(>20mins early)
+MQ,2015,3768,1937,375
+MQ,2016,0,0,0
+MQ,2017,0,0,0
+MQ,2018,5133,2801,910
+MQ,2019,3273,1978,703

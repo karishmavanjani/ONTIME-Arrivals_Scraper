@@ -1,6 +1,6 @@
-year,Total flights,Early Arrivals,Inflated padding(>20mins early)
-2015,0,0,0
-2016,0,0,0
-2017,0,0,0
-2018,23714,15593,5436
-2019,14761,9647,3258
+Carrier Code,year,Total flights,Early Arrivals,Inflated padding(>20mins early)
+9E,2015,0,0,0
+9E,2016,0,0,0
+9E,2017,0,0,0
+9E,2018,23714,15593,5436
+9E,2019,14761,9647,3258
