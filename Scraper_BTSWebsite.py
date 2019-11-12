@@ -15,6 +15,8 @@ url = "https://transtats.bts.gov/ONTIME/Arrivals.aspx"
 variable =0
 
 # create a new Chrome session
+#driver= webdriver(browser=("chrome"), chromever="78.0.3904.97")
+
 driver = webdriver.Chrome()
 driver.implicitly_wait(10)
 driver.get(url)
@@ -31,17 +33,30 @@ Months = driver.find_element_by_id('chkAllMonths').click()
 Days = driver.find_element_by_xpath('//*[@id="chkAllDays"]')
 driver.execute_script("arguments[0].click();", Days)
 
-Years = driver.find_element_by_id('chkYears_32')
-driver.execute_script("arguments[0].click();", Years)
+Year15 = driver.find_element_by_id('chkYears_28')
+Year16 = driver.find_element_by_id('chkYears_29')
+Year17 = driver.find_element_by_id('chkYears_30')
+Year18 = driver.find_element_by_id('chkYears_31')
+Year19 = driver.find_element_by_id('chkYears_32')
+
+driver.execute_script("arguments[0].click();", Year19)
+driver.execute_script("arguments[0].click();", Year18)
+driver.execute_script("arguments[0].click();", Year17)
+driver.execute_script("arguments[0].click();", Year16)
+driver.execute_script("arguments[0].click();", Year15)
+
 
 def get_excel():
  Submit = driver.find_element_by_xpath('//*[@id="btnSubmit"]')
+ driver.implicitly_wait(10)
  driver.execute_script("arguments[0].click();", Submit)
- driver.implicitly_wait(30)
+ driver.implicitly_wait(10)
  try:
-        Save= driver.find_element_by_xpath('//*[@id="DL_Excel"]')
+        Save= driver.find_element_by_xpath('//*[@id="DL_CSV"]')
+        
+        driver.implicitly_wait(10)
         driver.execute_script("arguments[0].click();", Save)
-        driver.implicitly_wait(10)    
+        driver.implicitly_wait(30)    
  except NoSuchElementException:
         print("No data")
 
@@ -50,7 +65,8 @@ Airport = driver.find_element_by_xpath('//*[@id="cboAirport"]/option[266]').clic
 while (variable<33):
  variable =variable+1 
  Airline = driver.find_element_by_xpath("//*[@id='cboAirline']/option["+str(variable)+"]").click()
- print(variable)
+ #.text() doesn't work on xpath
+ print(driver.find_element_by_xpath("//*[@id='cboAirline']/option["+str(variable)+"]").get_attribute("value"))
  get_excel()
 else:
  print("That's all folks!")
