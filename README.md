@@ -7,7 +7,7 @@ The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arri
 
 File Name: Scraper_BTSWebsite.
 
-Ouput: CSV files in the output folder 
+Ouput: CSV files in the data folder 
 
 <h3>Methodology</h3>
 
@@ -35,6 +35,6 @@ Finally, we compiled all the data to check the number of flights that arrived ea
 
 File Name: *.ipynb files in the notebook folder including Merge_all csv.ipynb
 
-Output= Final_Trend
+Output= Final_Trend in the output folder
 
 <h3>Caveat: Data is restricted to U.S. carrier (domestic) scheduled service only.</h3>
