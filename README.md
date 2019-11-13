@@ -1,7 +1,8 @@
 # ONTIME-Arrivals_Scraper
+Story: https://medium.com/@ThisisVanjani/did-you-arrive-at-jfk-earlier-than-expected-join-the-club-34dfcd1b332e
 Data Source: Bureau of Transportation Statistics (BTS)
 
-<h3>What it achieves</h3>
+<h3>What the code  achieves</h3>
 
 The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arrivals.aspx and downloads data for all flights that have landed at New York's JFK airpor for all months and dates from 2015 to 2019! To analyze and parse the data extracted we later use Pandas. 
 
