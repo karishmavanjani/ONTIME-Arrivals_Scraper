@@ -24,6 +24,10 @@ Note: Use of selenium is due to the static nature of the url which limits our ab
 
 To obtain the difference between 'Scheduled Arrival Time' and 'Actual Arrival Time' of passengers at the JFK gate, we analyze thousands of rows of data using Pandas.
 
+File Name: *.ipynb files in the notebook folder including Merge_all csv.ipynb
+
+Output= Final_Trend in the output folder
+
 <h3>Methodology</h3>
 
 The code looks at difference in flight arrival times by creating new columns using pd.to_datetime. 
@@ -33,8 +37,5 @@ For the edge case where the airlines report an actual arrival time or scheduled 
 
 Finally, we compiled all the data to check the number of flights that arrived early in 2015 vs all years later.
 
-File Name: *.ipynb files in the notebook folder including Merge_all csv.ipynb
-
-Output= Final_Trend in the output folder
 
 <h3>Caveat: Data is restricted to U.S. carrier (domestic) scheduled service only.</h3>
