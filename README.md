@@ -6,6 +6,7 @@ Data Source: Bureau of Transportation Statistics (BTS)
 The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arrivals.aspx and downloads data for all flights that have landed at New York's JFK airpor for all months and dates from 2015 to 2019! To analyze and parse the data extracted we later use Pandas. 
 
 File Name: Scraper_BTSWebsite.
+
 Ouput: CSV files in the output folder 
 
 <h3>Methodology</h3>
@@ -32,7 +33,8 @@ For the edge case where the airlines report an actual arrival time or scheduled 
 
 Finally, we compiled all the data to check the number of flights that arrived early in 2015 vs all years later.
 
-File Name: (*.ipynb)files in the notebook folder including Merge_all csv.ipynb
+File Name: *.ipynb files in the notebook folder including Merge_all csv.ipynb
+
 Output= Final_Trend
 
 <h3>Caveat: Data is restricted to U.S. carrier (domestic) scheduled service only.</h3>
