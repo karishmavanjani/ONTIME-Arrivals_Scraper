@@ -8,7 +8,7 @@ The selenium code looks into the aspx url- https://transtats.bts.gov/ONTIME/Arri
 
 File Name: Scraper_BTSWebsite.
 
-Ouput: CSV files in the data folder 
+Ouput: Airline CSV files in the data folder 
 
 <h3>Methodology</h3>
 
@@ -25,9 +25,11 @@ Note: Use of selenium is due to the static nature of the url which limits our ab
 
 To obtain the difference between 'Scheduled Arrival Time' and 'Actual Arrival Time' of passengers at the JFK gate, we analyze thousands of rows of data using Pandas.
 
-File Name: *.ipynb files in the notebook folder including Merge_all csv.ipynb
+File Name: Python_Analysis.ipynb and 
+Final_Trend.ipynb
 
-Output= Final_Trend in the output folder
+Output: Final_Trend.csv and 
+combined_csv.csv
 
 <h3>Methodology</h3>
 
